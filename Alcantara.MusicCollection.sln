@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alcantara.MusicCollection.Domain", "Alcantara.MusicCollection.Domain\Alcantara.MusicCollection.Domain.csproj", "{0288E98E-9024-4BB9-B85A-1D05CA44666B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{8F8F3C05-D94D-4F5B-BDE5-7394D0C847B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3D0E2B37-8A58-4416-BCE4-9CD6BDF599DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alcantara.MusicCollection.Infra", "Alcantara.MusicCollection.Infra\Alcantara.MusicCollection.Infra.csproj", "{B61BA85F-3741-4A6B-814C-9091214C2ADB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{044A4471-78D9-40C5-9571-3CC260B1537A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alcantara.MusicCollection.WebApp", "Alcantara.MusicCollection.WebApp\Alcantara.MusicCollection.WebApp.csproj", "{2184FBC8-7A7E-4366-989E-D4D135A3CCB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0288E98E-9024-4BB9-B85A-1D05CA44666B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0288E98E-9024-4BB9-B85A-1D05CA44666B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0288E98E-9024-4BB9-B85A-1D05CA44666B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0288E98E-9024-4BB9-B85A-1D05CA44666B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61BA85F-3741-4A6B-814C-9091214C2ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61BA85F-3741-4A6B-814C-9091214C2ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61BA85F-3741-4A6B-814C-9091214C2ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61BA85F-3741-4A6B-814C-9091214C2ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2184FBC8-7A7E-4366-989E-D4D135A3CCB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2184FBC8-7A7E-4366-989E-D4D135A3CCB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2184FBC8-7A7E-4366-989E-D4D135A3CCB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2184FBC8-7A7E-4366-989E-D4D135A3CCB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0288E98E-9024-4BB9-B85A-1D05CA44666B} = {8F8F3C05-D94D-4F5B-BDE5-7394D0C847B2}
+		{B61BA85F-3741-4A6B-814C-9091214C2ADB} = {3D0E2B37-8A58-4416-BCE4-9CD6BDF599DC}
+		{2184FBC8-7A7E-4366-989E-D4D135A3CCB0} = {044A4471-78D9-40C5-9571-3CC260B1537A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCE38AE9-2D12-43E7-AD0B-184F8B8A32D7}
+	EndGlobalSection
+EndGlobal

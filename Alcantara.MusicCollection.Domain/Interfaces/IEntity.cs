@@ -1,7 +1,7 @@
 ﻿namespace Alcantara.MusicCollection.Domain.Interfaces
 {
-    public interface IBaseEntity
+    public interface IEntity
     {
-        long ID { get; set; }
+        int Id { get; set; }
     }
 }

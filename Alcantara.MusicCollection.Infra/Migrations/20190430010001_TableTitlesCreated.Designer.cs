@@ -3,14 +3,16 @@ using Alcantara.MusicCollection.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Alcantara.MusicCollection.Infra.Migrations
 {
     [DbContext(typeof(MusicCollectionContext))]
-    partial class MusicCollectionContextModelSnapshot : ModelSnapshot
+    [Migration("20190430010001_TableTitlesCreated")]
+    partial class TableTitlesCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,20 +32,6 @@ namespace Alcantara.MusicCollection.Infra.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Artists");
-                });
-
-            modelBuilder.Entity("Alcantara.MusicCollection.Domain.Entities.Genre", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("Alcantara.MusicCollection.Domain.Entities.Title", b =>
@@ -66,37 +54,11 @@ namespace Alcantara.MusicCollection.Infra.Migrations
                     b.ToTable("Titles");
                 });
 
-            modelBuilder.Entity("Alcantara.MusicCollection.Domain.Entities.TitleGenre", b =>
-                {
-                    b.Property<int>("TitleId");
-
-                    b.Property<int>("GenreId");
-
-                    b.HasKey("TitleId", "GenreId");
-
-                    b.HasIndex("GenreId");
-
-                    b.ToTable("TitleGenres");
-                });
-
             modelBuilder.Entity("Alcantara.MusicCollection.Domain.Entities.Title", b =>
                 {
                     b.HasOne("Alcantara.MusicCollection.Domain.Entities.Artist", "Artist")
                         .WithMany("Titles")
                         .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Alcantara.MusicCollection.Domain.Entities.TitleGenre", b =>
-                {
-                    b.HasOne("Alcantara.MusicCollection.Domain.Entities.Genre", "Genre")
-                        .WithMany("TitleGenres")
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Alcantara.MusicCollection.Domain.Entities.Title", "Title")
-                        .WithMany("TitleGenres")
-                        .HasForeignKey("TitleId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

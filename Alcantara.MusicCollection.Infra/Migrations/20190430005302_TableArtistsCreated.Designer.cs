@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Alcantara.MusicCollection.Infra.Migrations
 {
     [DbContext(typeof(MusicCollectionContext))]
-    [Migration("20190415030308_UserTableAdded")]
-    partial class UserTableAdded
+    [Migration("20190430005302_TableArtistsCreated")]
+    partial class TableArtistsCreated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,29 +20,18 @@ namespace Alcantara.MusicCollection.Infra.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Alcantara.MusicCollection.Domain.Entities.User", b =>
+            modelBuilder.Entity("Alcantara.MusicCollection.Domain.Entities.Artist", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AccessToken");
-
-                    b.Property<string>("Email")
-                        .IsRequired();
-
                     b.Property<string>("Name")
-                        .IsRequired();
-
-                    b.Property<string>("Password")
                         .IsRequired();
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.ToTable("User");
+                    b.ToTable("Artists");
                 });
 #pragma warning restore 612, 618
         }

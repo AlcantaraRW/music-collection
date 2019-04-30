@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics;
 
 namespace Alcantara.MusicCollection.WebApp
 {
@@ -13,6 +14,9 @@ namespace Alcantara.MusicCollection.WebApp
     {
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            System.Threading.Thread.Sleep(3000);
+            Debugger.Launch();
+
             var configBuilder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
